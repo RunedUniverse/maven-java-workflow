@@ -129,11 +129,11 @@
 								<!-- attach-artifact could be removed -->
 								<!-- if maven could cache more effective -->
 								<goal id="attach-artifact" optional="true">
+									<groupId>org.codehaus.mojo</groupId>
+									<artifactId>build-helper-maven-plugin</artifactId>
 									<modes>
 										<mode id="default" />
 									</modes>
-									<groupId>org.codehaus.mojo</groupId>
-									<artifactId>build-helper-maven-plugin</artifactId>
 								</goal>
 								<goal id="deploy">
 									<groupId>org.apache.maven.plugins</groupId>
@@ -185,7 +185,7 @@
 					<phases>
 						<phase id="validate">
 							<goals>
-								<goal id="check">
+								<goal id="check" optional="true">
 									<groupId>com.mycila</groupId>
 									<artifactId>license-maven-plugin</artifactId>
 									<modes>
@@ -211,7 +211,7 @@
 					<phases>
 						<phase id="verify">
 							<goals>
-								<goal id="check">
+								<goal id="check" optional="true">
 									<groupId>com.diffplug.spotless</groupId>
 									<artifactId>spotless-maven-plugin</artifactId>
 									<modes>
@@ -266,6 +266,14 @@
 								<goal id="compile">
 									<groupId>org.apache.maven.plugins</groupId>
 									<artifactId>maven-compiler-plugin</artifactId>
+									<modes>
+										<mode id="default" />
+										<mode id="dev" />
+									</modes>
+								</goal>
+								<goal id="generate-metadata" optional="true">
+									<groupId>org.codehaus.plexus</groupId>
+									<artifactId>plexus-component-metadata</artifactId>
 									<modes>
 										<mode id="default" />
 										<mode id="dev" />
