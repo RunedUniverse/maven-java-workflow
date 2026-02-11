@@ -170,7 +170,7 @@
 		</profile>
 		<!-- PIPELINE -->
 		<profile>
-			<id>install</id>
+			<id>ci-install</id>
 			<build>
 				<defaultGoal>clean install</defaultGoal>
 				<plugins>
@@ -238,7 +238,7 @@
 		</profile>
 		<!-- LICENSES -->
 		<profile>
-			<id>validate</id>
+			<id>ci-validate</id>
 			<build>
 				<defaultGoal>license:check formatter:validate</defaultGoal>
 				<plugins>
