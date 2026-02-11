@@ -418,9 +418,12 @@
 							<licenseSet>
 								<header>${root-dir}/src/license/header.txt</header>
 								<excludes>
+									<exclude>.build/**</exclude>
+									<exclude>.code-formats/**</exclude>
 									<exclude>**/.mvn/repo/**</exclude>
 									<exclude>**/license/**</exclude>
 									<exclude>**/target/**</exclude>
+									<exclude>Jenkinsfile</exclude>
 								</excludes>
 							</licenseSet>
 						</licenseSets>
