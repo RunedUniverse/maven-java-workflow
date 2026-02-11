@@ -15,7 +15,7 @@ def installArtifact(mod, parent = null) {
 	def version = evalValue('project.version', relPath)
 	echo "Building: ${ groupId }:${ artifactId }:${ version }"
 	try {
-		sh "mvn-dev -P ${ REPOS },toolchain-openjdk-1-8-0,ci-install -pl=${ relPath }"
+		sh "mvn-dev -P ${ REPOS },toolchain-openjdk-1-8-0,ci-install ${ relPath==null ? '' : ('-pl='+relPath) }"
 	} finally {
 		def baseName = "${ artifactId }-${ version }"
 		// create spec .pom in target/ path
