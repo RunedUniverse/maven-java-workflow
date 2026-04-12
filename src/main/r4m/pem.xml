@@ -69,6 +69,14 @@
 										<mode id="dev" />
 									</modes>
 								</goal>
+								<goal id="clean" optional="true">
+									<groupId>org.codehaus.mojo</groupId>
+									<artifactId>flatten-maven-plugin</artifactId>
+									<modes>
+										<mode id="default" />
+										<mode id="dev" />
+									</modes>
+								</goal>
 							</goals>
 						</phase>
 					</phases>
@@ -108,6 +116,18 @@
 									<modes>
 										<mode id="dev" />
 										<mode id="format" />
+									</modes>
+								</goal>
+							</goals>
+						</phase>
+						<phase id="process-resources">
+							<goals>
+								<goal id="flatten" optional="true">
+									<groupId>org.codehaus.mojo</groupId>
+									<artifactId>flatten-maven-plugin</artifactId>
+									<modes>
+										<mode id="default" />
+										<mode id="dev" />
 									</modes>
 								</goal>
 							</goals>
