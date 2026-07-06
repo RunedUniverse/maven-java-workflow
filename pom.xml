@@ -26,6 +26,8 @@
 	<packaging>maven-plugin</packaging>
 
 	<name>Maven Java Workflow</name>
+	<description>R4M Maven Java Workflow, provides the r4m-metadata for the
+		default workflow used in building all sorts of java projects</description>
 	<url>https://github.com/RunedUniverse/maven-java-workflow</url>
 	<inceptionYear>2025</inceptionYear>
 
@@ -43,7 +45,7 @@
 		<plexus-component-version>1.7.1</plexus-component-version>
 		<plugin-maven-clean-version>3.4.1</plugin-maven-clean-version>
 		<plugin-maven-toolchains-version>3.2.0</plugin-maven-toolchains-version>
-		<plugin-maven-resources-version>3.3.1</plugin-maven-resources-version>
+		<plugin-maven-resources-version>3.5.0</plugin-maven-resources-version>
 		<plugin-maven-compiler-version>3.14.0</plugin-maven-compiler-version>
 		<plugin-maven-jar-version>3.4.2</plugin-maven-jar-version>
 		<plugin-maven-source-version>3.3.1</plugin-maven-source-version>
@@ -221,7 +223,8 @@
 				<repository>
 					<id>runeduniverse-releases</id>
 					<url>
-						https://nexus.runeduniverse.net/repository/maven-releases/</url>
+						https://nexus.runeduniverse.net/repository/maven-releases/
+					</url>
 				</repository>
 			</repositories>
 		</profile>
@@ -232,7 +235,8 @@
 				<repository>
 					<id>runeduniverse-development</id>
 					<url>
-						https://nexus.runeduniverse.net/repository/maven-development/</url>
+						https://nexus.runeduniverse.net/repository/maven-development/
+					</url>
 				</repository>
 			</repositories>
 		</profile>
